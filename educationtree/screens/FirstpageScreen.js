@@ -18,7 +18,7 @@ const LoginScreen = (props) => {
             style={styles.logoContainer}
           >
             <Image style={{width:100, height:100, marginTop:25,}} source={require("../images/logoapp.png")} />
-            <Text style={{fontSize:17, color:'black', textAlign:'center', fontWeight:'bold'}}>ระบบเก็บข้อมูลนักศึกษาคณะเทคโนโลยีสารสนเทศ</Text>
+            <Text style={{fontSize:18, color:'black', textAlign:'center', fontWeight:'bold', fontFamily:'kanitBold'}}>ระบบเก็บข้อมูลนักศึกษาคณะเทคโนโลยีสารสนเทศ</Text>
             <View
                   style={{
                     borderBottomWidth: 1,
@@ -32,22 +32,22 @@ const LoginScreen = (props) => {
             >                      
             <Image style={{width:100, height:100, marginTop:10, borderRadius:50}} source={require("../images/Profile.jpg")} />
             </TouchableOpacity>  
-            <Text style={{fontSize:20, color:'black', textAlign:'center'}}>นาย นนททรัพย์ เซี่ยงฉิน</Text>
-            <Text style={{fontSize:15, color:'black', textAlign:'center'}}>รหัสนักศึกษา : 61070095</Text>
+            <Text style={{fontSize:20, color:'black', textAlign:'center', fontFamily:'kanitLight'}}>นาย นนททรัพย์ เซี่ยงฉิน</Text>
+            <Text style={{fontSize:15, color:'black', textAlign:'center', fontFamily:'kanitLight'}}>รหัสนักศึกษา : 61070095</Text>
             <View style={styles.buttonMenu}>
-              <Text style={{fontSize:20, color:'white', textAlign:'center'}} onPress={() => {props.navigation.navigate("Profile");}}>จัดการข้อมูลส่วนตัว</Text>
+              <Text style={{fontSize:20, color:'white', textAlign:'center', fontFamily:'kanitLight'}} onPress={() => {props.navigation.navigate("Profile");}}>จัดการข้อมูลส่วนตัว</Text>
             </View>
             <View style={styles.buttonMenu2}>               
-              <Text style={{fontSize:20, color:'white', textAlign:'center'}} onPress={() => {props.navigation.navigate("Class");}}>จัดการข้อมูลการเรียน</Text>
+              <Text style={{fontSize:20, color:'white', textAlign:'center', fontFamily:'kanitLight'}} onPress={() => {props.navigation.navigate("Class");}}>จัดการข้อมูลการเรียน</Text>
             </View>              
             <View style={styles.buttonMenu3}>   
-              <Text style={{fontSize:20, color:'white', textAlign:'center'}} onPress={() => {props.navigation.navigate("Schedule");}}>ตารางเรียน</Text>
+              <Text style={{fontSize:20, color:'white', textAlign:'center', fontFamily:'kanitLight'}} onPress={() => {props.navigation.navigate("Schedule");}}>ตารางเรียน</Text>
             </View>              
             <View style={styles.buttonMenu2}>   
-              <Text style={{fontSize:20, color:'white', textAlign:'center'}} onPress={() => {props.navigation.navigate("Viewclass");}}>ดูหลักสูตรรายวิชา | รีวิวรายวิชา</Text>
+              <Text style={{fontSize:20, color:'white', textAlign:'center', fontFamily:'kanitLight'}} onPress={() => {props.navigation.navigate("Viewclass");}}>ดูหลักสูตรรายวิชา | รีวิวรายวิชา</Text>
             </View>
             <View style={styles.buttonMenu4}>   
-              <Text style={{fontSize:20, color:'white', textAlign:'center'}} onPress={() => {props.navigation.navigate("Login");}}>ออกจากระบบ</Text>
+              <Text style={{fontSize:20, color:'white', textAlign:'center', fontFamily:'kanitLight'}} onPress={() => {props.navigation.navigate("Login");}}>ออกจากระบบ</Text>
             </View>                  
           </View>
         </KeyboardAvoidingView>
@@ -103,6 +103,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     marginTop:25,
+    marginBottom:25,
   },     
   // formContainer:{
   //     marginBottom: 30
@@ -122,14 +123,6 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     alignItems: "center",
     justifyContent: "center",
-  },
-  buttonSignIn: {
-    backgroundColor: "#ffffff",
-    height: 70,
-    borderRadius: 15,
-    alignItems: "center",
-    justifyContent: "center",
-    marginTop: 80,
   },
 });
 export default LoginScreen;

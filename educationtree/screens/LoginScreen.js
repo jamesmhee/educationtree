@@ -10,59 +10,61 @@ import {
 } from "react-native";
 const LoginScreen = (props) => {
     return (
-      <KeyboardAvoidingView behavior="padding" style={styles.container}>
-        <View
-          style={styles.logoContainer}
-        >
-          <Image style={{width:150, height:150, marginTop:25}} source={require("../images/logoapp.png")} />
-        </View>
-        <View
-          style={styles.buttonContainer}
-        >
-              <Text style={{color: "white", fontWeight: "bold", fontSize: 20, textAlign:"center", marginTop:50}}>Username / รหัสนักศึกษา</Text>
-              <TextInput
-                style={styles.Textinput} placeholder="ใส่รหัสนักศึกษาหรือชื่อผู้ใช้งาน"
-              />
-              <Text style={{color: "white", fontWeight: "bold", fontSize: 20, textAlign:"center", marginTop:10}}>Password / รหัสผ่าน</Text>
-              <TextInput
-                secureTextEntry={true} style={styles.Textinput} placeholder="ใส่รหัสผ่าน"
-              />                           
-            <View
-              style={
-                styles.buttonSignIn
-              }
-            >            
-              <TouchableOpacity
-              onPress={() => {props.navigation.navigate("Firstpage");}}
-              >
+      <View style={styles.font}>
+        <KeyboardAvoidingView behavior="padding" style={styles.container}>
+          <View
+            style={styles.logoContainer}
+          >
+            <Image style={{width:150, height:150, marginTop:25}} source={require("../images/logoapp.png")} />
+          </View>
+          <View
+            style={styles.buttonContainer}
+          >
+                <Text style={{color: "white", fontWeight: "bold", fontSize: 20, textAlign:"center", marginTop:50, fontFamily:'kanitLight'}}>Username / รหัสนักศึกษา</Text>
+                <TextInput
+                  style={styles.Textinput} placeholder="ใส่รหัสนักศึกษาหรือชื่อผู้ใช้งาน"
+                />
+                <Text style={{color: "white", fontWeight: "bold", fontSize: 20, textAlign:"center", marginTop:10, fontFamily:'kanitLight'}}>Password / รหัสผ่าน</Text>
+                <TextInput
+                  secureTextEntry={true} style={styles.Textinput} placeholder="ใส่รหัสผ่าน"
+                />                           
+              <View
+                style={
+                  styles.buttonSignIn
+                }
+              >            
+                <TouchableOpacity
+                onPress={() => {props.navigation.navigate("Firstpage");}}
+                >
+                <Text
+                  style={{ color: "black", fontWeight: "bold", fontSize: 20, width:300, textAlign:"center", fontFamily:'kanitLight'}}
+                >
+                  เข้าสู่ระบบ
+                </Text>
+                </TouchableOpacity>
+              </View>
+              <View
+                  style={{
+                    borderBottomWidth: 1,
+                    borderBottomColor: 'white',
+                    width: 300,
+                    marginTop: 30,
+                  }}
+                />
               <Text
-                style={{ color: "black", fontWeight: "bold", fontSize: 20, width:300, textAlign:"center"}}
-              >
-                เข้าสู่ระบบ
-              </Text>
-              </TouchableOpacity>
-            </View>
-            <View
-                style={{
-                  borderBottomWidth: 1,
-                  borderBottomColor: 'white',
-                  width: 300,
-                  marginTop: 30,
-                }}
-              />
-            <Text
-            onPress={() => {props.navigation.navigate("BookDetail");}}
-                style={{ color: "white", fontSize: 20, width:300, textAlign:"center", marginTop: 10}}
-              >
-                สมัครสมาชิก
-              </Text>
-            <View
-              style={
-                styles.buttonSignIn}
-            >              
-            </View>     
-        </View>
-      </KeyboardAvoidingView>
+              onPress={() => {props.navigation.navigate("BookDetail");}}
+                  style={{ color: "white", fontSize: 20, width:300, textAlign:"center", marginTop: 10, fontFamily:'kanitLight'}}
+                >
+                  สมัครสมาชิก
+                </Text>
+              <View
+                style={
+                  styles.buttonSignIn}
+              >              
+              </View>     
+          </View>
+        </KeyboardAvoidingView>
+      </View>
     );
 }
 const styles = StyleSheet.create({
@@ -106,6 +108,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     marginTop: 80,
+  },
+  font:{
+    fontFamily:'kanitLight',
   },
 });
 export default LoginScreen;

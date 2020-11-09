@@ -9,80 +9,60 @@ import {
   Image,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import { ScrollView } from "react-native-gesture-handler";
 const SignInScreen = (props) => {
   return (
-    <View style={styles.container}>
-      <StatusBar barStyle="light-content" />
-      <View style={styles.headerContainer}>
-      <Ionicons name="ios-arrow-back" size={40} color="black" style={styles.iconBack}
-       onPress={() => {props.navigation.navigate("Firstpage");}}
-       />
-        <Text style={styles.Header}>ดูหลักสูตรรายวิชา | รีวิว</Text>
-        <Image style={styles.logo} source={require("../images/manage.png")} />
-      </View>
-      <View
-        style={{
-          borderTopLeftRadius: 30,
-          borderTopRightRadius: 30,
-          backgroundColor: "white",
-          marginTop: 0,
-          alignItems: "center",
-          flexGrow: 1,
-          justifyContent: "center",
-        }}
-      >
-       
-       <View style={{flex: 1, flexDirection: 'row'}}>
-       <Image style={styles.book} source={require("../images/book.jpg")} />
-       <View>
-        <Text style={styles.direct}>Turning Point</Text>
-        <Text style={styles.details}> By STEEL,DANIELLE</Text>
-        <Text style={{color: 'red', fontWeight: "bold", marginTop:10,}}>
-            Available : 
-        <Text style={{color: 'black', fontWeight: "bold"}}>
-             10 Days
-        </Text> 
-        </Text>
-        <Text style={{color: 'red', fontWeight: "bold", marginTop:10,}}>
-            Price : 
-        <Text style={{color: 'black', fontWeight: "bold"}}>
-             0.99 $
-        </Text> 
-        </Text>
-        
+    <ScrollView>
+      <View style={styles.container}>
+        <StatusBar barStyle="light-content" />
+        <View style={styles.headerContainer}>
+        <Ionicons name="ios-arrow-back" size={40} color="black" style={styles.iconBack}
+        onPress={() => {props.navigation.navigate("Firstpage");}}
+        />
+          <Text style={styles.Header}>จัดการข้อมูลส่วนตัว</Text>
+          <Image style={styles.logo} source={require("../images/manage.png")} />
         </View>
-        
-        
-        </View>
-        <Text style={styles.welcome}>Choose payment</Text>
-        <View style={{flex: 1, flexDirection: 'row'}}>
-       <Image style={styles.payment1} source={require("../images/paypal.png")} />
-       <View>
-       <Image style={styles.payment2} source={require("../images/master.png")} />
-        
-       
-        
-        </View>
-        
-        
-        </View>
-        
-        <TouchableOpacity
-          style={styles.buttonContainer}
-          onPress={() => {
-            props.navigation.navigate("Login");
+        <View
+          style={{
+            backgroundColor: "white",
+            marginTop: 0,
+            alignItems: "center",
+            flexGrow: 1,
+            justifyContent: "center",
           }}
         >
-          <Text style={styles.buttonText}>My Books</Text>
-        </TouchableOpacity>
+        
+        <View style={styles.center}>
+            <Image style={styles.profile} source={require("../images/Profile.jpg")} />  
+            <Text style={styles.infoprofile}>ประวัติส่วนตัว</Text>
+        </View>
+        <View>
+            <Text style={styles.infoprofile2}>รหัสประจำตัว : 61070095</Text>
+            <Text style={styles.infoprofile2}>รหัสประจำตัวประชาชน : 1101501021319</Text>
+            <Text style={styles.infoprofile2}>คำนำหน้า : นาย</Text>
+            <Text style={styles.infoprofile2}>ชื่อจริง : นนททรัพย์</Text>
+            <Text style={styles.infoprofile2}>นามสกุล : เซี่ยงฉิน</Text>
+            <Text style={styles.infoprofile2}>วัน/เดือน/ปี เกิด : 9 สิงหาคม 2542</Text>
+            <Text style={styles.infoprofile2}>สาขาวิชา : เทคโนโลยีสารสนเทศ</Text>
+            <Text style={styles.infoprofile2}>รหัสประจำตัวประชาชน : 1101501021319</Text>
+            <Text style={styles.infoprofile2}>Email : nontasabsiangchin@hotmail.com</Text>
+            <Text style={styles.infoprofile2}>เบอร์ติดต่อ : 084-519-9514</Text>
+        </View>
+        <View style={styles.button}>
+            <Text style={{fontSize:20, color:'white', textAlign:'center', fontFamily:'kanitLight',}} onPress={() => {props.navigation.navigate("Firstpage");}}>แก้ไขข้อมูล</Text>
+        </View>
+          
+      
+        </View>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#FFB200",
+    fontFamily:'kanitLight',
   },
   Header: {
     color: "black",
@@ -92,6 +72,7 @@ const styles = StyleSheet.create({
     marginLeft:15,
     marginTop: 30,
     paddingLeft: 20,
+    fontFamily:'kanitLight',
   },
   headerContainer: {
     marginTop:20,
@@ -120,20 +101,37 @@ const styles = StyleSheet.create({
 
   },
   direct: {
-      marginTop:20,
+    marginTop:20,
     fontWeight: "bold",
-    marginRight: 50,
     fontSize: 18,
   },
-  book: {
+  center:{
+    alignContent:"center", 
+    justifyContent:"center", 
+    alignItems:"center",
+  },
+  profile: {
+    alignContent:"center", 
+    justifyContent:"center", 
+    alignItems:"center",
     width: 100,
-    height: 150,
-    marginBottom:150,
-    marginRight: 50,
-    borderTopLeftRadius: 30,
-    borderTopRightRadius: 30,
-    borderBottomLeftRadius: 30,
-    borderBottomRightRadius: 30,
+    height: 100,
+    marginBottom:10,
+    marginTop: 20,
+    borderRadius:50,
+  },
+  infoprofile: {
+    textAlign:'center',
+    fontSize:25,
+    fontWeight:'bold',
+    marginBottom:5,
+    fontFamily:'kanitLight',
+  },
+  infoprofile2: {
+    textAlign:'left',
+    fontSize:20,
+    marginTop:2,
+    fontFamily:'kanitLight',
   },
   payment1 :{
     width: 80,
@@ -199,5 +197,17 @@ const styles = StyleSheet.create({
     marginTop:30,
     marginLeft:10,
   },
+  button:{
+    color:'white',
+    backgroundColor: "#001389",
+    width: '60%',
+    height: 70,
+    borderRadius: 10,
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop:30,
+    marginBottom: 50,
+    fontFamily:'kanitLight',
+  },     
 });
 export default SignInScreen;

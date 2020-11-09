@@ -49,7 +49,7 @@ const SignInScreen = (props) => {
             <Text style={styles.infoprofile2}>เบอร์ติดต่อ : 084-519-9514</Text>
         </View>
         <View style={styles.button}>
-            <Text style={{fontSize:20, color:'white', textAlign:'center'}} onPress={() => {props.navigation.navigate("Firstpage");}}>แก้ไขข้อมูล</Text>
+            <Text style={{fontSize:20, color:'white', textAlign:'center', fontFamily:'kanitLight',}} onPress={() => {props.navigation.navigate("Firstpage");}}>แก้ไขข้อมูล</Text>
         </View>
           
       
@@ -62,6 +62,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#FFB200",
+    fontFamily:'kanitLight',
   },
   Header: {
     color: "black",
@@ -71,6 +72,7 @@ const styles = StyleSheet.create({
     marginLeft:15,
     marginTop: 30,
     paddingLeft: 20,
+    fontFamily:'kanitLight',
   },
   headerContainer: {
     marginTop:20,
@@ -123,11 +125,13 @@ const styles = StyleSheet.create({
     fontSize:25,
     fontWeight:'bold',
     marginBottom:5,
+    fontFamily:'kanitLight',
   },
   infoprofile2: {
     textAlign:'left',
     fontSize:20,
     marginTop:2,
+    fontFamily:'kanitLight',
   },
   payment1 :{
     width: 80,
@@ -203,6 +207,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     marginTop:30,
     marginBottom: 50,
+    fontFamily:'kanitLight',
   },     
 });
 export default SignInScreen;
