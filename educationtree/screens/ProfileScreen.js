@@ -48,9 +48,10 @@ const SignInScreen = (props) => {
             <Text style={styles.infoprofile2}>Email : nontasabsiangchin@hotmail.com</Text>
             <Text style={styles.infoprofile2}>เบอร์ติดต่อ : 084-519-9514</Text>
         </View>
-        <View style={styles.button}>
-            <Text style={{fontSize:20, color:'white', textAlign:'center', fontFamily:'kanitLight',}} onPress={() => {props.navigation.navigate("Firstpage");}}>แก้ไขข้อมูล</Text>
-        </View>
+        <TouchableOpacity style={styles.button} onPress={() => {props.navigation.navigate("Firstpage");}}>
+          <Text style={{fontSize:20, color:'white', textAlign:'center', fontFamily:'kanitLight',}} onPress={() => {props.navigation.navigate("Firstpage");}}>แก้ไขข้อมูล</Text>
+        </TouchableOpacity>         
+
           
       
         </View>
@@ -133,26 +134,6 @@ const styles = StyleSheet.create({
     marginTop:2,
     fontFamily:'kanitLight',
   },
-  payment1 :{
-    width: 80,
-    height: 80,
-    margin: 35,
-    marginBottom:20,
-    borderTopLeftRadius: 40,
-    borderTopRightRadius: 40,
-    borderBottomLeftRadius: 40,
-    borderBottomRightRadius: 40,
-  },
-  payment2 :{
-    width: 120,
-    height: 80,
-    margin: 35,
-    marginBottom:20,
-    borderTopLeftRadius: 40,
-    borderTopRightRadius: 40,
-    borderBottomLeftRadius: 40,
-    borderBottomRightRadius: 40,
-  },
   input: {
     height: 50,
     fontWeight: "bold",
@@ -167,15 +148,6 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 15,
     width: 300,
     fontSize: 16,
-  },
-  welcome: {
-    fontSize: 21,
-    textAlign: "center",
-    fontWeight: "bold",
-    paddingBottom:10,
-    
-    color: "black",
-    
   },
   buttonContainer: {
     backgroundColor: "black",

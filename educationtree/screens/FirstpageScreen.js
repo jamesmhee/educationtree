@@ -38,27 +38,27 @@ const LoginScreen = (props) => {
             <Text style={{fontSize:15, color:'black', textAlign:'center', fontFamily:'kanitLight'}}>รหัสนักศึกษา : 61070095</Text>
             <View style={styles.title}>
               <View style={styles.buttonRow}>
-                <TouchableOpacity style={styles.button}>
+                <TouchableOpacity style={styles.button} onPress={() => {props.navigation.navigate("Profile");}}>
                   <Ionicons name="ios-person" size={35} color="black" onPress={() => {props.navigation.navigate("Profile");}}/>
                   <Text style={{fontSize:18, color:'black', textAlign:'center', fontFamily:'kanitLight'}} onPress={() => {props.navigation.navigate("Profile");}} >จัดการข้อมูลส่วนตัว</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.button}>
+                <TouchableOpacity style={styles.button} onPress={() => {props.navigation.navigate("Class");}}>
                   <Ionicons name="ios-school" size={35} color="black" onPress={() => {props.navigation.navigate("Class");}}/>
                   <Text style={{fontSize:18, color:'black', textAlign:'center', fontFamily:'kanitLight'}} onPress={() => {props.navigation.navigate("Class");}} >จัดการข้อมูลการเรียน</Text>
                 </TouchableOpacity>
               </View> 
               <View style={styles.buttonRow}>
-                <TouchableOpacity style={styles.button}>
+                <TouchableOpacity style={styles.button} onPress={() => {props.navigation.navigate("Schedule");}}>
                   <Ionicons name="ios-calendar" size={35} color="black" onPress={() => {props.navigation.navigate("Schedule");}}/>
                   <Text style={{fontSize:18, color:'black', textAlign:'center', fontFamily:'kanitLight'}} onPress={() => {props.navigation.navigate("Schedule");}} >ดูตารางเรียน</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.button}>
+                <TouchableOpacity style={styles.button} onPress={() => {props.navigation.navigate("Viewclass");}}>
                   <Ionicons name="ios-search" size={35} color="black" onPress={() => {props.navigation.navigate("Viewclass");}}/>
                   <Text style={{fontSize:18, color:'black', textAlign:'center', fontFamily:'kanitLight'}} onPress={() => {props.navigation.navigate("Viewclass");}} >ดูหลักสูตรรายวิชา</Text>
                 </TouchableOpacity>
               </View> 
             </View>                 
-                <TouchableOpacity style={styles.button2}>
+                <TouchableOpacity style={styles.button2} onPress={() => {props.navigation.navigate("Login");}}>
                   <Ionicons name="ios-log-out" size={35} color="white" onPress={() => {props.navigation.navigate("Login");}}/>
                   <Text style={{fontSize:18, color:'white', textAlign:'center', fontFamily:'kanitLight'}} onPress={() => {props.navigation.navigate("Login");}}>ออกจากระบบ</Text>
                 </TouchableOpacity>            
@@ -93,6 +93,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "white",
+    height:'100%',
   },
   logoContainer: {
     alignContent:"center", 
