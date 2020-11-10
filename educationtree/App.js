@@ -22,7 +22,7 @@ export default class App extends Component {
         kanitLight: require('./assets/fonts/Kanit-Light.ttf'),
         kanitBlackItalic: require('./assets/fonts/Kanit-BlackItalic.ttf'),
         kanitBold: require('./assets/fonts/Kanit-Bold.ttf'),
-      })
+      }),
   
       this.setState({ loadingFont: true })
     }

@@ -13,49 +13,49 @@ const PagesNavigator = createStackNavigator({
   Login: {
     screen:LoginScreen,
     navigationOptions: {
-      header: null,
+      headerShown: false,
     },
   },
   SignIn: {
     screen:SignInScreen,
     navigationOptions: {
-      header: null,
+      headerShown: false,
     },
   },
   SignUp: {
     screen:SignUpScreen,
     navigationOptions: {
-      header: null,
+      headerShown: false,
     },
   },
   Firstpage: {
     screen:FirstpageScreen,
     navigationOptions: {
-      header: null,
+      headerShown: false,
     },
   },
   Profile: {
     screen:ProfileScreen,
     navigationOptions: {
-      header: null,
+      headerShown: false,
     },
   },
   Class: {
     screen:ClassScreen,
     navigationOptions: {
-      header: null,
+      headerShown: false,
     },
   },
   Schedule: {
     screen:ScheduleScreen,
     navigationOptions: {
-      header: null,
+      headerShown: false,
     },
   },
   Viewclass: {
     screen:ViewclassScreen,
     navigationOptions: {
-      header: null,
+      headerShown: false,
     },
   },
   

@@ -8,12 +8,14 @@ import {
   TouchableOpacity,
   TextInput,
   Icon,
+  Button,
 } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
+import { Ionicons } from "@expo/vector-icons";
 const LoginScreen = (props) => {
     return (
       <ScrollView>
-        <KeyboardAvoidingView behavior="padding" style={styles.container}>
+        <View style={styles.container}>
           <View
             style={styles.logoContainer}
           >
@@ -28,33 +30,66 @@ const LoginScreen = (props) => {
                   }}
                 />
             <TouchableOpacity
-            onPress={() => {props.navigation.navigate("Rent");}}
+            onPress={() => {props.navigation.navigate("Profile");}}
             >                      
             <Image style={{width:100, height:100, marginTop:10, borderRadius:50}} source={require("../images/Profile.jpg")} />
             </TouchableOpacity>  
             <Text style={{fontSize:20, color:'black', textAlign:'center', fontFamily:'kanitLight'}}>นาย นนททรัพย์ เซี่ยงฉิน</Text>
             <Text style={{fontSize:15, color:'black', textAlign:'center', fontFamily:'kanitLight'}}>รหัสนักศึกษา : 61070095</Text>
-            <View style={styles.buttonMenu}>
-              <Text style={{fontSize:20, color:'white', textAlign:'center', fontFamily:'kanitLight'}} onPress={() => {props.navigation.navigate("Profile");}}>จัดการข้อมูลส่วนตัว</Text>
-            </View>
-            <View style={styles.buttonMenu2}>               
-              <Text style={{fontSize:20, color:'white', textAlign:'center', fontFamily:'kanitLight'}} onPress={() => {props.navigation.navigate("Class");}}>จัดการข้อมูลการเรียน</Text>
-            </View>              
-            <View style={styles.buttonMenu3}>   
-              <Text style={{fontSize:20, color:'white', textAlign:'center', fontFamily:'kanitLight'}} onPress={() => {props.navigation.navigate("Schedule");}}>ตารางเรียน</Text>
-            </View>              
-            <View style={styles.buttonMenu2}>   
-              <Text style={{fontSize:20, color:'white', textAlign:'center', fontFamily:'kanitLight'}} onPress={() => {props.navigation.navigate("Viewclass");}}>ดูหลักสูตรรายวิชา | รีวิวรายวิชา</Text>
-            </View>
-            <View style={styles.buttonMenu4}>   
-              <Text style={{fontSize:20, color:'white', textAlign:'center', fontFamily:'kanitLight'}} onPress={() => {props.navigation.navigate("Login");}}>ออกจากระบบ</Text>
-            </View>                  
-          </View>
-        </KeyboardAvoidingView>
+            <View style={styles.title}>
+              <View style={styles.buttonRow}>
+                <TouchableOpacity style={styles.button}>
+                  <Ionicons name="ios-person" size={35} color="black" onPress={() => {props.navigation.navigate("Profile");}}/>
+                  <Text style={{fontSize:18, color:'black', textAlign:'center', fontFamily:'kanitLight'}} onPress={() => {props.navigation.navigate("Profile");}} >จัดการข้อมูลส่วนตัว</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.button}>
+                  <Ionicons name="ios-school" size={35} color="black" onPress={() => {props.navigation.navigate("Class");}}/>
+                  <Text style={{fontSize:18, color:'black', textAlign:'center', fontFamily:'kanitLight'}} onPress={() => {props.navigation.navigate("Class");}} >จัดการข้อมูลการเรียน</Text>
+                </TouchableOpacity>
+              </View> 
+              <View style={styles.buttonRow}>
+                <TouchableOpacity style={styles.button}>
+                  <Ionicons name="ios-calendar" size={35} color="black" onPress={() => {props.navigation.navigate("Schedule");}}/>
+                  <Text style={{fontSize:18, color:'black', textAlign:'center', fontFamily:'kanitLight'}} onPress={() => {props.navigation.navigate("Schedule");}} >ดูตารางเรียน</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.button}>
+                  <Ionicons name="ios-search" size={35} color="black" onPress={() => {props.navigation.navigate("Viewclass");}}/>
+                  <Text style={{fontSize:18, color:'black', textAlign:'center', fontFamily:'kanitLight'}} onPress={() => {props.navigation.navigate("Viewclass");}} >ดูหลักสูตรรายวิชา</Text>
+                </TouchableOpacity>
+              </View> 
+            </View>                 
+                <TouchableOpacity style={styles.button2}>
+                  <Ionicons name="ios-log-out" size={35} color="white" onPress={() => {props.navigation.navigate("Login");}}/>
+                  <Text style={{fontSize:18, color:'white', textAlign:'center', fontFamily:'kanitLight'}} onPress={() => {props.navigation.navigate("Login");}}>ออกจากระบบ</Text>
+                </TouchableOpacity>            
+            </View>               
+        </View>
       </ScrollView>
     );
 }
 const styles = StyleSheet.create({
+  button: {
+    alignItems: "center",
+    backgroundColor: "#ff8000",
+    padding:10,
+    marginLeft:5,
+    marginRight:5,
+    borderRadius: 10,
+    width:'47%',
+  },
+  button2: {
+    alignItems: "center",
+    backgroundColor: "#001389",
+    padding:10,
+    marginTop:35,
+    marginBottom:50,
+    borderRadius: 10,
+    width:'84%',
+  },
+  title: {
+    textAlign: 'center',
+    marginVertical: 8,
+  },
   container: {
     flex: 1,
     backgroundColor: "white",
@@ -69,42 +104,20 @@ const styles = StyleSheet.create({
     justifyContent:"center", 
     alignItems:"center",
   },
+  buttonRow:{
+    marginTop:20,
+    flexDirection: "row",
+    justifyContent: 'space-between',
+  },
   buttonMenu:{
     color:'white',
-    backgroundColor: "#001389",
+    backgroundColor: "#ff8000",
     width: '100%',
     height: 70,
     alignItems: "center",
     justifyContent: "center",
     marginTop:20,
-  },
-  buttonMenu2:{
-    color:'white',
-    backgroundColor: "#FF8300",
-    width: '100%',
-    height: 70,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  buttonMenu3:{
-    color:'white',
-    backgroundColor: "#001389",
-    width: '100%',
-    height: 70,
-    alignItems: "center",
-    justifyContent: "center",
   }, 
-  buttonMenu4:{
-    color:'white',
-    backgroundColor: "#001389",
-    width: '60%',
-    height: 70,
-    borderRadius: 10,
-    alignItems: "center",
-    justifyContent: "center",
-    marginTop:25,
-    marginBottom:25,
-  },     
   // formContainer:{
   //     marginBottom: 30
   // },

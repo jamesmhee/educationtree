@@ -8,14 +8,17 @@ import {
   TouchableOpacity,
   TextInput,
 } from "react-native";
+import { ScrollView } from "react-native-gesture-handler";
+import { Ionicons } from "@expo/vector-icons";
 const LoginScreen = (props) => {
     return (
+      <ScrollView>
       <View style={styles.font}>
         <KeyboardAvoidingView behavior="padding" style={styles.container}>
           <View
             style={styles.logoContainer}
           >
-            <Image style={{width:150, height:150, marginTop:25}} source={require("../images/logoapp.png")} />
+            <Image style={{width:150, height:150, marginTop:60}} source={require("../images/logoapp.png")} />
           </View>
           <View
             style={styles.buttonContainer}
@@ -65,6 +68,7 @@ const LoginScreen = (props) => {
           </View>
         </KeyboardAvoidingView>
       </View>
+      </ScrollView>
     );
 }
 const styles = StyleSheet.create({
@@ -107,7 +111,8 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 80,
+    marginTop: 50,
+    marginBottom: 20,
   },
   font:{
     fontFamily:'kanitLight',
