@@ -55,7 +55,7 @@ const LoginScreen = (props) => {
                   }}
                 />
               <Text
-              onPress={() => {props.navigation.navigate("Firstpage");}}
+              onPress={() => {props.navigation.navigate("SignUp");}}
                   style={{ color: "white", fontSize: 20, width:300, textAlign:"center", marginTop: 10, fontFamily:'kanitLight'}}
                 >
                   สมัครสมาชิก

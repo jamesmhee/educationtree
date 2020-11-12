@@ -19,8 +19,9 @@ const SignInScreen = (props) => {
         <Ionicons name="ios-arrow-back" size={40} color="black" style={styles.iconBack}
         onPress={() => {props.navigation.navigate("Firstpage");}}
         />
-          <Text style={styles.Header}>จัดการข้อมูลส่วนตัว</Text>
-          <Image style={styles.logo} source={require("../images/manage.png")} />
+          <Text style={styles.Header}>จัดการข้อมูลการเรียน</Text>
+          <Ionicons name="ios-school" size={40} color="black" style={styles.logo}
+        />
         </View>
         <View
           style={{
@@ -88,9 +89,8 @@ const styles = StyleSheet.create({
   logo: {
     width: 60,
     height: 60,
-    marginTop:20,
+    marginTop:30,
     marginVertical: 25,
-    marginRight: 10,
   },
   
   details: {

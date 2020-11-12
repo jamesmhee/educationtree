@@ -60,7 +60,7 @@ const LoginScreen = (props) => {
             </View>                 
                 <TouchableOpacity style={styles.button2} onPress={() => {props.navigation.navigate("Login");}}>
                   <Ionicons name="ios-log-out" size={35} color="white" onPress={() => {props.navigation.navigate("Login");}}/>
-                  <Text style={{fontSize:18, color:'white', textAlign:'center', fontFamily:'kanitLight'}} onPress={() => {props.navigation.navigate("Login");}}>ออกจากระบบ</Text>
+                  <Text style={{fontSize:15, color:'white', textAlign:'center', fontFamily:'kanitLight'}} onPress={() => {props.navigation.navigate("Login");}}>ออกจากระบบ</Text>
                 </TouchableOpacity>            
             </View>               
         </View>
@@ -84,7 +84,8 @@ const styles = StyleSheet.create({
     marginTop:35,
     marginBottom:50,
     borderRadius: 10,
-    width:'84%',
+    width:'50%',
+    height: 80,
   },
   title: {
     textAlign: 'center',
